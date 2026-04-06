@@ -2,11 +2,18 @@
 """
 Fetch yesterday's ad spend from all platforms and write to SharePoint Excel.
 
-Platforms:
-  - Google Ads   : 3 Vosker + 3 SpyPoint accounts
-  - Facebook Ads : 2 Vosker + 2 SpyPoint accounts
-  - Microsoft Ads: 2 accounts
-  - TikTok Ads   : 1 Vosker account
+Platforms & aggregation:
+  Vosker:
+    - Google Ads    = sum(Vosker CA-EN + Vosker Québec + Vosker Products)
+    - Facebook Ads  = sum(Vosker + Vosker Québec)
+    - Microsoft Ads = Vosker Security
+    - TikTok Ads    = 1 account
+  SpyPoint:
+    - Google Ads    = sum(SPYPOINT Google Ads + Spypoint Québec + Spypoint CA-EN)
+    - Facebook Ads  = sum(SPYPOINT + Spypoint Québec)
+    - Microsoft Ads = SPYPOINT
+
+Ignored: all Europe accounts, TikTok for SpyPoint.
 
 Usage:
     python main.py              # defaults to yesterday
@@ -26,6 +33,7 @@ from config import (
 )
 from platforms import google_ads, facebook_ads, microsoft_ads, tiktok_ads
 from sharepoint import download_workbook, write_spend_to_workbook, upload_workbook
+from excel_mapping import load_excel_mapping
 
 logging.basicConfig(
     level=logging.INFO,
@@ -35,7 +43,7 @@ logger = logging.getLogger(__name__)
 
 
 def main() -> None:
-    # Determine target date
+    # Determine target date (yesterday by default)
     if len(sys.argv) > 1:
         target_date = date.fromisoformat(sys.argv[1])
     else:
@@ -43,13 +51,13 @@ def main() -> None:
 
     logger.info("Fetching ad spend for %s", target_date)
 
-    # ── 1. Fetch spend from all platforms ──────────────────────────
+    # ── 1. Fetch spend from all platforms (aggregated per brand) ───
     all_spend: dict[str, float] = {}
 
     logger.info("── Google Ads ──")
     all_spend.update(google_ads.fetch_all(GoogleAdsConfig(), target_date))
 
-    logger.info("── Facebook Ads ──")
+    logger.info("── Meta Ads ──")
     all_spend.update(facebook_ads.fetch_all(FacebookAdsConfig(), target_date))
 
     logger.info("── Microsoft Ads ──")
@@ -59,22 +67,29 @@ def main() -> None:
     all_spend.update(tiktok_ads.fetch_all(TikTokAdsConfig(), target_date))
 
     # ── 2. Summary ─────────────────────────────────────────────────
-    logger.info("── Spend summary ──")
+    # Expected keys:
+    #   google_ads_vosker, google_ads_spypoint,
+    #   facebook_ads_vosker, facebook_ads_spypoint,
+    #   microsoft_ads_vosker, microsoft_ads_spypoint,
+    #   tiktok_ads_vosker
+    logger.info("── Spend summary (aggregated per brand) ──")
     for key, value in sorted(all_spend.items()):
-        logger.info("  %-25s %10.2f", key, value)
-    logger.info("  %-25s %10.2f", "TOTAL", sum(all_spend.values()))
+        logger.info("  %-30s %10.2f", key, value)
+    logger.info("  %-30s %10.2f", "TOTAL", sum(all_spend.values()))
 
     # ── 3. Write to SharePoint Excel ──────────────────────────────
+    mapping = load_excel_mapping()
     sp_cfg = SharePointConfig()
+
     logger.info("Downloading workbook from SharePoint…")
     wb = download_workbook(sp_cfg)
 
-    write_spend_to_workbook(wb, all_spend, target_date)
+    write_spend_to_workbook(wb, all_spend, target_date, mapping)
 
     logger.info("Uploading workbook to SharePoint…")
     upload_workbook(sp_cfg, wb)
 
-    logger.info("Done ✓")
+    logger.info("Done.")
 
 
 if __name__ == "__main__":

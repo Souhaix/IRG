@@ -1,4 +1,8 @@
-"""Configuration — loads account IDs and credentials from .env."""
+"""Configuration — loads account IDs and credentials from .env.
+
+All account IDs and tokens are loaded from environment variables.
+No real values are hardcoded here.
+"""
 
 import os
 from dataclasses import dataclass, field
@@ -18,16 +22,19 @@ class GoogleAdsConfig:
     refresh_token: str = os.getenv("GOOGLE_ADS_REFRESH_TOKEN", "")
     login_customer_id: str = os.getenv("GOOGLE_ADS_LOGIN_CUSTOMER_ID", "")
 
-    vosker_accounts: list[str] = field(default_factory=lambda: [
-        os.getenv("GOOGLE_ADS_VOSKER_1", ""),
-        os.getenv("GOOGLE_ADS_VOSKER_2", ""),
-        os.getenv("GOOGLE_ADS_VOSKER_3", ""),
-    ])
-    spypoint_accounts: list[str] = field(default_factory=lambda: [
-        os.getenv("GOOGLE_ADS_SPYPOINT_1", ""),
-        os.getenv("GOOGLE_ADS_SPYPOINT_2", ""),
-        os.getenv("GOOGLE_ADS_SPYPOINT_3", ""),
-    ])
+    # Vosker: 3 comptes à sommer
+    vosker_accounts: dict[str, str] = field(default_factory=lambda: {
+        "Vosker - CA-EN": os.getenv("GOOGLE_ADS_VOSKER_CA_EN", ""),
+        "Vosker - Québec": os.getenv("GOOGLE_ADS_VOSKER_QUEBEC", ""),
+        "Vosker Products": os.getenv("GOOGLE_ADS_VOSKER_PRODUCTS", ""),
+    })
+
+    # SpyPoint: 3 comptes à sommer
+    spypoint_accounts: dict[str, str] = field(default_factory=lambda: {
+        "SPYPOINT Google Ads": os.getenv("GOOGLE_ADS_SPYPOINT_MAIN", ""),
+        "Spypoint - Québec": os.getenv("GOOGLE_ADS_SPYPOINT_QUEBEC", ""),
+        "Spypoint - CA-EN": os.getenv("GOOGLE_ADS_SPYPOINT_CA_EN", ""),
+    })
 
 
 # ---------------------------------------------------------------------------
@@ -37,14 +44,17 @@ class GoogleAdsConfig:
 class FacebookAdsConfig:
     access_token: str = os.getenv("FACEBOOK_ACCESS_TOKEN", "")
 
-    vosker_accounts: list[str] = field(default_factory=lambda: [
-        os.getenv("FACEBOOK_VOSKER_1", ""),
-        os.getenv("FACEBOOK_VOSKER_2", ""),
-    ])
-    spypoint_accounts: list[str] = field(default_factory=lambda: [
-        os.getenv("FACEBOOK_SPYPOINT_1", ""),
-        os.getenv("FACEBOOK_SPYPOINT_2", ""),
-    ])
+    # Vosker: 2 comptes à sommer
+    vosker_accounts: dict[str, str] = field(default_factory=lambda: {
+        "Vosker": os.getenv("FACEBOOK_VOSKER_MAIN", ""),
+        "Vosker - Québec": os.getenv("FACEBOOK_VOSKER_QUEBEC", ""),
+    })
+
+    # SpyPoint: 2 comptes à sommer
+    spypoint_accounts: dict[str, str] = field(default_factory=lambda: {
+        "SPYPOINT": os.getenv("FACEBOOK_SPYPOINT_MAIN", ""),
+        "Spypoint - Québec": os.getenv("FACEBOOK_SPYPOINT_QUEBEC", ""),
+    })
 
 
 # ---------------------------------------------------------------------------
@@ -57,22 +67,26 @@ class MicrosoftAdsConfig:
     refresh_token: str = os.getenv("MICROSOFT_ADS_REFRESH_TOKEN", "")
     developer_token: str = os.getenv("MICROSOFT_ADS_DEVELOPER_TOKEN", "")
 
-    accounts: list[str] = field(default_factory=lambda: [
-        os.getenv("MICROSOFT_ADS_ACCOUNT_1", ""),
-        os.getenv("MICROSOFT_ADS_ACCOUNT_2", ""),
-    ])
+    # 1 compte Vosker, 1 compte SpyPoint (pas d'agrégation, 1 valeur chacun)
+    vosker_account: dict[str, str] = field(default_factory=lambda: {
+        "Vosker Security": os.getenv("MICROSOFT_ADS_VOSKER", ""),
+    })
+    spypoint_account: dict[str, str] = field(default_factory=lambda: {
+        "SPYPOINT": os.getenv("MICROSOFT_ADS_SPYPOINT", ""),
+    })
 
 
 # ---------------------------------------------------------------------------
-# TikTok Ads
+# TikTok Ads — Vosker uniquement (pas de SpyPoint)
 # ---------------------------------------------------------------------------
 @dataclass
 class TikTokAdsConfig:
     access_token: str = os.getenv("TIKTOK_ACCESS_TOKEN", "")
 
-    vosker_accounts: list[str] = field(default_factory=lambda: [
-        os.getenv("TIKTOK_VOSKER_1", ""),
-    ])
+    # 1 seul compte Vosker
+    vosker_account: dict[str, str] = field(default_factory=lambda: {
+        "Vosker": os.getenv("TIKTOK_VOSKER_ADVERTISER_ID", ""),
+    })
 
 
 # ---------------------------------------------------------------------------
@@ -85,37 +99,4 @@ class SharePointConfig:
     client_secret: str = os.getenv("SHAREPOINT_CLIENT_SECRET", "")
     site_name: str = os.getenv("SHAREPOINT_SITE_NAME", "")
     drive_id: str = os.getenv("SHAREPOINT_DRIVE_ID", "")
-    file_path: str = os.getenv("SHAREPOINT_FILE_PATH", "/General/Ad_Spending.xlsx")
-
-
-# ---------------------------------------------------------------------------
-# Excel mapping — sheet name → list of (row_label, platform, brand, account_index)
-#
-# Adjust the CELL_MAP below to match your actual Excel layout.
-# Each entry maps:  (sheet_name, cell) → description
-# ---------------------------------------------------------------------------
-
-# Which Excel sheet each brand uses
-SHEET_VOSKER = "Vosker"
-SHEET_SPYPOINT = "SpyPoint"
-
-# Column where yesterday's spend is written (adapt to your layout).
-# The script finds the column by matching yesterday's date in row 1.
-# Row numbers per platform/account (adapt to your layout).
-EXCEL_MAP = {
-    # --- Vosker sheet ---
-    "google_vosker_1":    {"sheet": SHEET_VOSKER, "row": 2},
-    "google_vosker_2":    {"sheet": SHEET_VOSKER, "row": 3},
-    "google_vosker_3":    {"sheet": SHEET_VOSKER, "row": 4},
-    "facebook_vosker_1":  {"sheet": SHEET_VOSKER, "row": 5},
-    "facebook_vosker_2":  {"sheet": SHEET_VOSKER, "row": 6},
-    "microsoft_1":        {"sheet": SHEET_VOSKER, "row": 7},
-    "microsoft_2":        {"sheet": SHEET_VOSKER, "row": 8},
-    "tiktok_vosker_1":    {"sheet": SHEET_VOSKER, "row": 9},
-    # --- SpyPoint sheet ---
-    "google_spypoint_1":  {"sheet": SHEET_SPYPOINT, "row": 2},
-    "google_spypoint_2":  {"sheet": SHEET_SPYPOINT, "row": 3},
-    "google_spypoint_3":  {"sheet": SHEET_SPYPOINT, "row": 4},
-    "facebook_spypoint_1": {"sheet": SHEET_SPYPOINT, "row": 5},
-    "facebook_spypoint_2": {"sheet": SHEET_SPYPOINT, "row": 6},
-}
+    file_path: str = os.getenv("SHAREPOINT_FILE_PATH", "")

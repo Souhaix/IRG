@@ -1,7 +1,6 @@
 google-ads==25.1.0
 facebook-business==20.0.0
 bingads==13.0.21
-tiktok-business-api==1.0.0
 requests==2.32.3
 openpyxl==3.1.5
 msal==1.31.0

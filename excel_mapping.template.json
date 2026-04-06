@@ -1,0 +1,43 @@
+{
+    "_comment": "TEMPLATE — Copier vers excel_mapping.json et remplir toutes les valeurs.",
+    "_instructions": "Ce fichier définit comment le script écrit dans le fichier Excel SharePoint.",
+
+    "file": {
+        "name": "TODO: nom exact du fichier Excel (ex: Suivi Dépenses Avril 2026.xlsx)",
+        "sharepoint_site": "TODO: nom du site SharePoint tel qu'il apparaît dans l'URL",
+        "path_in_sharepoint": "TODO: chemin complet dans le drive (ex: /General/Reporting/Suivi Dépenses Avril 2026.xlsx)",
+        "monthly_or_single": "TODO: 'monthly' si un fichier par mois, 'single' si un seul fichier permanent",
+        "monthly_path_pattern": "TODO: si monthly, pattern avec {year} et {month} (ex: /General/Reporting/Suivi Dépenses {year}-{month:02d}.xlsx)"
+    },
+
+    "dates": {
+        "location": "TODO: où se trouvent les dates (ex: 'row_1' si les dates sont en ligne 1 de B→AF, ou 'column_A' si en colonne A)",
+        "format": "TODO: format exact des dates dans Excel (ex: 'datetime', 'YYYY-MM-DD', 'DD/MM/YYYY', 'D MMMM', etc.)",
+        "start_column_or_row": "TODO: première cellule contenant une date (ex: 'B1' si dates en ligne 1 à partir de colonne B)"
+    },
+
+    "labels": {
+        "column": "TODO: colonne contenant les libellés de lignes (ex: 'A')",
+        "description": "Le script cherche le libellé exact dans cette colonne pour trouver la bonne ligne."
+    },
+
+    "vosker": {
+        "sheet_name": "TODO: nom exact de l'onglet Vosker dans le fichier Excel",
+        "google_ads_label": "TODO: libellé exact de la ligne Google Ads dans cet onglet (ex: 'Google Ads', 'Google', etc.)",
+        "facebook_ads_label": "TODO: libellé exact de la ligne Facebook/Meta Ads (ex: 'Meta Ads', 'Facebook Ads', etc.)",
+        "microsoft_ads_label": "TODO: libellé exact de la ligne Microsoft/Bing Ads (ex: 'Microsoft Ads', 'Bing Ads', etc.)",
+        "tiktok_ads_label": "TODO: libellé exact de la ligne TikTok Ads (ex: 'TikTok Ads', 'TikTok', etc.)"
+    },
+
+    "spypoint": {
+        "sheet_name": "TODO: nom exact de l'onglet SpyPoint dans le fichier Excel",
+        "google_ads_label": "TODO: libellé exact de la ligne Google Ads dans cet onglet",
+        "facebook_ads_label": "TODO: libellé exact de la ligne Facebook/Meta Ads",
+        "microsoft_ads_label": "TODO: libellé exact de la ligne Microsoft/Bing Ads"
+    },
+
+    "currency": {
+        "all_accounts_same_currency": "TODO: true/false",
+        "currency_code": "TODO: CAD, USD, etc."
+    }
+}
