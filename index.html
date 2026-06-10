@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corse Piscine Polyester — Votre Piscine Installée en Quelques Jours</title>
+<meta name="description" content="Piscines polyester en Corse : installation rapide, clé en main, sans mauvaises surprises. Demandez votre devis gratuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --blue: #1B4F72;
+  --blue-dark: #154360;
+  --white: #FFFFFF;
+  --sky: #D6EAF8;
+  --sky-light: #EBF5FB;
+  --gold: #F39C12;
+  --gold-hover: #E67E22;
+  --text: #2C3E50;
+  --text-light: #5D6D7E;
+  --green: #27AE60;
+  --radius: 12px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── URGENCY BANNER ── */
+.urgency-banner {
+  background: linear-gradient(90deg, var(--blue-dark), var(--blue));
+  color: var(--white);
+  text-align: center;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.urgency-banner i { color: var(--gold); margin-right: 8px; }
+
+/* ── NAV ── */
+.nav {
+  background: var(--white);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.nav-logo span { color: var(--gold); }
+
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-phone i {
+  background: var(--sky);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(27,79,114,0.92) 0%, rgba(21,67,96,0.75) 50%, rgba(27,79,114,0.55) 100%),
+              linear-gradient(180deg, #1B4F72 0%, #2E86C1 50%, #85C1E9 100%);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.03)" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,218.7C672,235,768,245,864,229.3C960,213,1056,171,1152,154.7C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom center;
+  background-size: 100% auto;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 80px 0;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.hero-badge i { color: var(--gold); margin-right: 6px; }
+
+.hero h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero h1 .highlight {
+  color: var(--gold);
+  position: relative;
+}
+
+.hero p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.15rem;
+  margin-bottom: 32px;
+  max-width: 580px;
+  line-height: 1.8;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(243,156,18,0.4);
+}
+
+.btn-cta:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(243,156,18,0.5);
+}
+
+.btn-cta i { font-size: 0.9rem; transition: transform 0.3s ease; }
+.btn-cta:hover i { transform: translateX(4px); }
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.hero-stat {
+  color: var(--white);
+}
+
+.hero-stat strong {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.hero-stat span {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--sky-light);
+  padding: 24px 0;
+  border-bottom: 1px solid #D5DBDB;
+}
+
+.trust-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.trust-item i {
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+/* ── SECTION DEFAULTS ── */
+.section { padding: 80px 0; }
+.section-alt { background: var(--sky-light); }
+
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 56px auto;
+}
+
+.section-label {
+  display: inline-block;
+  background: var(--sky);
+  color: var(--blue);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.section-header p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+}
+
+/* ── PROBLEM SECTION ── */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.problem-card {
+  background: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.problem-card .icon {
+  width: 56px;
+  height: 56px;
+  background: #FDEDEC;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #E74C3C;
+  margin-bottom: 20px;
+}
+
+.problem-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.problem-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ── SOLUTION / WHY POLYESTER ── */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.why-item {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid #E8E8E8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.why-item .check {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: #EAFAF1;
+  color: var(--green);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.why-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.why-item p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ── PROCESS ── */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  position: relative;
+}
+
+.process-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  position: relative;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.process-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.process-number {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--blue), #2E86C1);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.process-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.process-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.process-card .process-icon {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+/* ── TESTIMONIALS ── */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  border: 1px solid #E8E8E8;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover { transform: translateY(-3px); }
+
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.testimonial-card blockquote {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid var(--gold);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--sky);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.testimonial-author strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.testimonial-author span {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* ── MID CTA ── */
+.mid-cta {
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue), #2E86C1);
+  padding: 72px 0;
+  text-align: center;
+}
+
+.mid-cta h2 {
+  color: var(--white);
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.mid-cta p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── FORM SECTION ── */
+.form-section {
+  padding: 80px 0;
+  background: var(--sky-light);
+}
+
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.form-info h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.form-info > p {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.form-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.form-benefits li i {
+  color: var(--green);
+  font-size: 1rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.form-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+}
+
+.form-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.form-group label .required { color: #E74C3C; }
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #E8E8E8;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(27,79,114,0.08);
+}
+
+.form-group textarea { resize: vertical; min-height: 90px; }
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235D6D7E' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 18px;
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(243,156,18,0.35);
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(243,156,18,0.45);
+}
+
+.form-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 14px;
+}
+
+.form-note i { margin-right: 4px; }
+
+.success-message {
+  display: none;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.success-message .success-icon {
+  width: 72px;
+  height: 72px;
+  background: #EAFAF1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  font-size: 1.8rem;
+  color: var(--green);
+}
+
+.success-message h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.success-message p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ── FAQ ── */
+.faq-list {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  gap: 16px;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover { color: var(--blue); }
+
+.faq-question i {
+  font-size: 0.85rem;
+  color: var(--blue);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-question i { transform: rotate(180deg); }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-answer-inner {
+  padding: 0 28px 22px 28px;
+  font-size: 0.93rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--blue-dark);
+  color: rgba(255,255,255,0.8);
+  padding: 48px 0 24px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer h4 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer p, .footer a {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+}
+
+.footer a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover { color: var(--gold); }
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ── ANIMATIONS ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero { min-height: 500px; }
+  .hero-content { padding: 60px 0; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
+  .hero-stat strong { font-size: 1.3rem; }
+
+  .trust-bar .container { gap: 24px; }
+
+  .form-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .form-card { padding: 28px 20px; }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .urgency-banner { font-size: 0.8rem; padding: 10px 16px; }
+
+  .nav-phone span { display: none; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.7rem; }
+  .btn-cta { padding: 16px 28px; font-size: 0.95rem; }
+  .section { padding: 56px 0; }
+  .process-grid { gap: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ URGENCY BANNER ═══ -->
+<div class="urgency-banner">
+  <i class="fas fa-clock"></i>
+  Créneaux d'installation limités pour l'été 2026 — <strong>Réservez votre place maintenant</strong>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="container">
+    <a href="#" class="nav-logo">Corse Piscine <span>Polyester</span></a>
+    <a href="tel:+33600000000" class="nav-phone">
+      <i class="fas fa-phone"></i>
+      <span>04 95 XX XX XX</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content fade-up">
+      <div class="hero-badge"><i class="fas fa-award"></i> N°1 de la piscine polyester en Corse</div>
+      <h1>Votre Piscine Polyester Installée en <span class="highlight">Quelques Jours</span> — Sans Mauvaises Surprises</h1>
+      <p>Profitez enfin de votre jardin cet été. Nous nous occupons de tout : étude du terrain, installation et mise en eau. Clé en main, rapide, garanti.</p>
+      <a href="#devis" class="btn-cta">Demandez Votre Devis Gratuit <i class="fas fa-arrow-right"></i></a>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>150+</strong>
+          <span>Piscines installées en Corse</span>
+        </div>
+        <div class="hero-stat">
+          <strong>5 jours</strong>
+          <span>Durée moyenne d'installation</span>
+        </div>
+        <div class="hero-stat">
+          <strong>10 ans</strong>
+          <span>Garantie décennale</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-item">
+      <i class="fas fa-shield-halved"></i>
+      Garantie décennale
+    </div>
+    <div class="trust-item">
+      <i class="fas fa-certificate"></i>
+      Artisan certifié RGE
+    </div>
+    <div class="trust-item">
+      <i class="fas fa-map-marker-alt"></i>
+      Toute la Corse
+    </div>
+    <div class="trust-item">
+      <i class="fas fa-star"></i>
+      4.9/5 satisfaction client
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PROBLEM SECTION ═══ -->
+<section class="section fade-up">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Le constat</div>
+      <h2>Vous rêvez d'une piscine… mais le parcours semble compliqué ?</h2>
+      <p>Entre les délais de chantier, les devis incompréhensibles et la peur de tomber sur le mauvais artisan, on comprend votre hésitation.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon"><i class="fas fa-hourglass-half"></i></div>
+        <h3>Des mois de travaux interminables</h3>
+        <p>Une piscine béton, c'est 3 à 6 mois de chantier dans votre jardin. De la poussière, du bruit, et un été de perdu — encore une fois.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon"><i class="fas fa-euro-sign"></i></div>
+        <h3>Des coûts qui explosent en cours de route</h3>
+        <p>Vous signez pour un prix… et les « imprévus » s'accumulent. Terrassement, raccordements, finitions : la facture finale n'a plus rien à voir avec le devis.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon"><i class="fas fa-wrench"></i></div>
+        <h3>Un entretien qui devient un calvaire</h3>
+        <p>Liner à changer tous les 10 ans, fuites, algues incrustées dans les joints… Vous passez plus de temps à entretenir la piscine qu'à en profiter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOLUTION: WHY POLYESTER ═══ -->
+<section class="section section-alt fade-up">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">La solution</div>
+      <h2>Pourquoi le polyester change tout</h2>
+      <p>Les piscines polyester (coque) offrent tous les avantages d'une piscine haut de gamme — sans les inconvénients du béton ou du liner.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <div>
+          <h4>Installation en 3 à 5 jours</h4>
+          <p>La coque arrive prête. Pas de coffrage, pas de séchage. Votre piscine est opérationnelle en une semaine.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <div>
+          <h4>Prix fixe, sans surprise</h4>
+          <p>Un devis clair et complet dès le départ. Ce que vous signez, c'est ce que vous payez. Point final.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <div>
+          <h4>Zéro liner à remplacer</h4>
+          <p>La surface gelcoat est lisse, résistante et anti-algues. Pas de liner à changer tous les 10 ans — vous économisez des milliers d'euros.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <div>
+          <h4>Entretien minimal</h4>
+          <p>La surface non poreuse empêche les algues de s'accrocher. Moins de produits chimiques, moins de corvée, plus de baignade.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <div>
+          <h4>Durabilité exceptionnelle</h4>
+          <p>Structure monobloc ultra-résistante, garantie décennale. Votre piscine traversera les décennies sans fissure ni déformation.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <div>
+          <h4>Moins cher que le béton</h4>
+          <p>À qualité égale, une piscine polyester coûte 20 à 40 % de moins qu'une piscine béton. Le meilleur rapport qualité-prix du marché.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section class="section fade-up">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Comment ça marche</div>
+      <h2>Votre piscine en 3 étapes simples</h2>
+      <p>De votre premier appel à votre premier plongeon, nous nous occupons de tout.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-icon"><i class="fas fa-file-signature"></i></div>
+        <div class="process-number">1</div>
+        <h3>Demandez votre devis</h3>
+        <p>Remplissez le formulaire ci-dessous. C'est gratuit, sans engagement, et vous recevez une réponse sous 24h.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-icon"><i class="fas fa-hard-hat"></i></div>
+        <div class="process-number">2</div>
+        <h3>Visite technique gratuite</h3>
+        <p>Notre technicien se déplace chez vous pour étudier le terrain, vos envies, et vous proposer la solution idéale.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-icon"><i class="fas fa-water"></i></div>
+        <div class="process-number">3</div>
+        <h3>Profitez de votre piscine</h3>
+        <p>Installation rapide par notre équipe. En quelques jours, vous plongez dans votre nouvelle piscine. Tout simplement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="section section-alt fade-up">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Témoignages</div>
+      <h2>Ils ont fait le choix du polyester</h2>
+      <p>Découvrez ce que nos clients en Corse disent de leur expérience.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <blockquote>« On hésitait depuis 3 ans. Finalement, notre piscine 8x4 a été posée en 4 jours. Les enfants ont pu en profiter tout l'été. Je regrette juste de ne pas l'avoir fait plus tôt ! »</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div>
+            <strong>Marie R.</strong>
+            <span>Porto-Vecchio</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <blockquote>« Le devis était clair et le prix final identique au centime près. L'équipe est sérieuse, propre, et rapide. Notre 6x3 est parfaite pour notre terrain en pente. »</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JL</div>
+          <div>
+            <strong>Jean-Luc D.</strong>
+            <span>Ajaccio</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <blockquote>« Après un devis béton à 45 000 €, on a choisi le polyester : moitié prix, installée en une semaine. Deux étés plus tard, zéro problème. Un vrai bonheur chaque soir. »</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SF</div>
+          <div>
+            <strong>Sophie F.</strong>
+            <span>Bastia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MID CTA ═══ -->
+<section class="mid-cta fade-up">
+  <div class="container">
+    <h2>Cet été, vous pourriez enfin profiter de votre propre piscine</h2>
+    <p>Il ne vous manque qu'un premier pas. Demandez votre devis gratuit — nous vous répondons sous 24h.</p>
+    <a href="#devis" class="btn-cta">Demandez Votre Devis Gratuit <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ═══ FORM SECTION ═══ -->
+<section class="form-section" id="devis">
+  <div class="container">
+    <div class="form-wrapper fade-up">
+      <div class="form-info">
+        <h2>Recevez votre devis gratuit sous 24h</h2>
+        <p>Remplissez ce formulaire rapide et notre équipe vous recontacte pour discuter de votre projet. Aucun engagement, aucune obligation.</p>
+        <ul class="form-benefits">
+          <li><i class="fas fa-check-circle"></i> Devis 100% gratuit et sans engagement</li>
+          <li><i class="fas fa-check-circle"></i> Réponse garantie sous 24 heures</li>
+          <li><i class="fas fa-check-circle"></i> Visite technique offerte à domicile</li>
+          <li><i class="fas fa-check-circle"></i> Prix fixe — aucun frais caché</li>
+          <li><i class="fas fa-check-circle"></i> Accompagnement pour les démarches administratives</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <h3>Votre projet piscine commence ici</h3>
+        <form id="leadForm" onsubmit="return handleSubmit(event)">
+          <div class="form-group">
+            <label for="prenom">Prénom <span class="required">*</span></label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone <span class="required">*</span></label>
+            <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="projet">Quel type de projet ? <span class="required">*</span></label>
+            <select id="projet" name="projet" required>
+              <option value="" disabled selected>Sélectionnez votre projet</option>
+              <option value="nouvelle_piscine">Nouvelle piscine</option>
+              <option value="remplacement_liner">Remplacement liner</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (optionnel)</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre projet, la taille souhaitée, vos questions..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Demandez Votre Devis Gratuit <i class="fas fa-arrow-right"></i></button>
+          <p class="form-note"><i class="fas fa-lock"></i> Vos données sont protégées et ne seront jamais partagées.</p>
+        </form>
+        <div class="success-message" id="successMessage">
+          <div class="success-icon"><i class="fas fa-check"></i></div>
+          <h3>Merci pour votre demande !</h3>
+          <p>Nous vous recontacterons sous 24h pour discuter de votre projet piscine. Préparez vos maillots ! ☀️</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section fade-up">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Questions fréquentes</div>
+      <h2>Tout ce que vous devez savoir</h2>
+      <p>Les réponses aux questions que nos clients nous posent le plus souvent.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Combien coûte une piscine polyester ?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Le prix varie selon la taille et la configuration du terrain. En général, comptez entre 15 000 € et 35 000 € tout compris (coque, terrassement, installation, mise en eau). C'est en moyenne 20 à 40 % moins cher qu'une piscine béton équivalente. Nous vous fournissons un devis détaillé et transparent après la visite technique gratuite.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Combien de temps dure l'installation ?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            L'installation de la coque prend en moyenne 3 à 5 jours ouvrés, selon l'accessibilité du terrain et les aménagements souhaités. Du premier coup de pelle au remplissage, vous pouvez vous baigner en une semaine. Incomparable avec les 3 à 6 mois d'un chantier béton.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Faut-il un permis de construire ?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Pour les piscines de moins de 100 m², une simple déclaration préalable de travaux en mairie suffit (délai : environ 1 mois). Au-delà de 100 m², un permis de construire est nécessaire. Nous vous accompagnons dans toutes les démarches administratives — vous n'avez rien à gérer.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Quel entretien pour une piscine polyester ?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            C'est justement l'un des grands avantages du polyester : la surface en gelcoat est lisse et non poreuse, ce qui empêche les algues de s'accrocher. Un nettoyage régulier et un traitement de l'eau classique suffisent. Pas de liner à changer, pas de joints à refaire. Vous passez moins de temps à entretenir et plus de temps à profiter.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Quelle garantie pour ma piscine ?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Nos piscines sont couvertes par la garantie décennale (10 ans), obligatoire en France pour les travaux de construction. La coque elle-même bénéficie d'une garantie fabricant. Vous êtes couvert sur la structure, l'étanchéité et l'installation. En cas de souci, nous intervenons rapidement — nous sommes en Corse, à côté de chez vous.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BOTTOM CTA ═══ -->
+<section class="mid-cta fade-up">
+  <div class="container">
+    <h2>Ne laissez pas passer un été de plus sans piscine</h2>
+    <p>Les créneaux pour l'été 2026 se remplissent vite. Faites le premier pas maintenant.</p>
+    <a href="#devis" class="btn-cta">Demandez Votre Devis Gratuit <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Corse Piscine Polyester</h4>
+        <p>Spécialiste de la piscine polyester en Corse depuis plus de 10 ans. Nous installons des piscines clé en main sur toute l'île : Ajaccio, Bastia, Porto-Vecchio, Calvi, Corte et partout en Corse-du-Sud et Haute-Corse.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+33600000000"><i class="fas fa-phone"></i> 04 95 XX XX XX</a></li>
+          <li><a href="mailto:contact@corsepiscine.fr"><i class="fas fa-envelope"></i> contact@corsepiscine.fr</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> Corse, France</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informations</h4>
+        <ul class="footer-links">
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Conditions générales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Corse Piscine Polyester — Tous droits réservés. SIRET : XXX XXX XXX XXXXX
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  var form = document.getElementById('leadForm');
+  var success = document.getElementById('successMessage');
+  form.style.display = 'none';
+  success.style.display = 'block';
+  return false;
+}
+
+function toggleFaq(btn) {
+  var item = btn.parentElement;
+  var isActive = item.classList.contains('active');
+  var allItems = document.querySelectorAll('.faq-item');
+  for (var i = 0; i < allItems.length; i++) {
+    allItems[i].classList.remove('active');
+  }
+  if (!isActive) {
+    item.classList.add('active');
+  }
+}
+
+function initScrollAnimations() {
+  var elements = document.querySelectorAll('.fade-up');
+  var observer = new IntersectionObserver(function(entries) {
+    for (var i = 0; i < entries.length; i++) {
+      if (entries[i].isIntersecting) {
+        entries[i].target.classList.add('visible');
+        observer.unobserve(entries[i].target);
+      }
+    }
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  for (var i = 0; i < elements.length; i++) {
+    observer.observe(elements[i]);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initScrollAnimations);
+</script>
+
+</body>
+</html>
